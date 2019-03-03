@@ -10,6 +10,9 @@
 		074B9631222BA39500636D78 /* TouchBarHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074B9627222BA39500636D78 /* TouchBarHelper.framework */; };
 		074B9636222BA39500636D78 /* TouchBarHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 074B9635222BA39500636D78 /* TouchBarHelperTests.m */; };
 		074B9638222BA39500636D78 /* TouchBarHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 074B962A222BA39500636D78 /* TouchBarHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E132AE222BA90E00CDABB2 /* TouchBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E132AC222BA90E00CDABB2 /* TouchBarManager.m */; };
+		07E132AF222BA90E00CDABB2 /* TouchBarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E132AD222BA90E00CDABB2 /* TouchBarManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E132BC222BB34400CDABB2 /* TouchBarPrivateApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E132BB222BB2EB00CDABB2 /* TouchBarPrivateApi.h */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +23,13 @@
 			remoteGlobalIDString = 074B9626222BA39400636D78;
 			remoteInfo = TouchBarHelper;
 		};
+		074B966C222BA5B000636D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074B9668222BA5AF00636D78 /* TouchBarHelperDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 074B9651222BA5AE00636D78;
+			remoteInfo = TouchBarHelperDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +39,13 @@
 		074B9630222BA39500636D78 /* TouchBarHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchBarHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074B9635222BA39500636D78 /* TouchBarHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchBarHelperTests.m; sourceTree = "<group>"; };
 		074B9637222BA39500636D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		074B9668222BA5AF00636D78 /* TouchBarHelperDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TouchBarHelperDemo.xcodeproj; path = TouchBarHelperDemo/TouchBarHelperDemo.xcodeproj; sourceTree = "<group>"; };
+		07E132AC222BA90E00CDABB2 /* TouchBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchBarManager.m; sourceTree = "<group>"; };
+		07E132AD222BA90E00CDABB2 /* TouchBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchBarManager.h; sourceTree = "<group>"; };
+		07E132B1222BAA7D00CDABB2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		07E132B3222BAA9C00CDABB2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		07E132B4222BAA9C00CDABB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07E132BB222BB2EB00CDABB2 /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +70,11 @@
 		074B961D222BA39400636D78 = {
 			isa = PBXGroup;
 			children = (
+				074B9668222BA5AF00636D78 /* TouchBarHelperDemo.xcodeproj */,
 				074B9629222BA39500636D78 /* TouchBarHelper */,
 				074B9634222BA39500636D78 /* TouchBarHelperTests */,
 				074B9628222BA39500636D78 /* Products */,
+				07E132B0222BAA7D00CDABB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +90,11 @@
 		074B9629222BA39500636D78 /* TouchBarHelper */ = {
 			isa = PBXGroup;
 			children = (
+				07E132AD222BA90E00CDABB2 /* TouchBarManager.h */,
+				07E132AC222BA90E00CDABB2 /* TouchBarManager.m */,
 				074B962A222BA39500636D78 /* TouchBarHelper.h */,
 				074B962B222BA39500636D78 /* Info.plist */,
+				07E132BB222BB2EB00CDABB2 /* TouchBarPrivateApi.h */,
 			);
 			path = TouchBarHelper;
 			sourceTree = "<group>";
@@ -86,6 +108,24 @@
 			path = TouchBarHelperTests;
 			sourceTree = "<group>";
 		};
+		074B9669222BA5AF00636D78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				074B966D222BA5B000636D78 /* TouchBarHelperDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07E132B0222BAA7D00CDABB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07E132B3222BAA9C00CDABB2 /* CoreFoundation.framework */,
+				07E132B4222BAA9C00CDABB2 /* Foundation.framework */,
+				07E132B1222BAA7D00CDABB2 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +133,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E132AF222BA90E00CDABB2 /* TouchBarManager.h in Headers */,
 				074B9638222BA39500636D78 /* TouchBarHelper.h in Headers */,
+				07E132BC222BB34400CDABB2 /* TouchBarPrivateApi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +205,12 @@
 			mainGroup = 074B961D222BA39400636D78;
 			productRefGroup = 074B9628222BA39500636D78 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 074B9669222BA5AF00636D78 /* Products */;
+					ProjectRef = 074B9668222BA5AF00636D78 /* TouchBarHelperDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				074B9626222BA39400636D78 /* TouchBarHelper */,
@@ -170,6 +218,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		074B966D222BA5B000636D78 /* TouchBarHelperDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TouchBarHelperDemo.app;
+			remoteRef = 074B966C222BA5B000636D78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		074B9625222BA39400636D78 /* Resources */ = {
@@ -193,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E132AE222BA90E00CDABB2 /* TouchBarManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
